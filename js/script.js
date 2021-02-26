@@ -94,20 +94,6 @@ const tab = new Swiper('.tab-contents', {
 });
 
 
-const iSObservers = document.querySelectorAll('.waypoint');
-const options = {
-    threshold: 0.1
-};
-
-const inView = (target) => {
-    if (target.classList.contains('typing')) {
-        const spanWrap = new SpanWrap(target);
-        spanWrap.init();
-    } else if (target.classList.contains('cont-img')) {
-        target.classList.add('fadeIn');
-    }
-};
-
 class SpanWrap {
     constructor() {
         this.settings = {
@@ -165,6 +151,23 @@ class SpanWrap {
     }
 
 }
+
+const spanWrap = new SpanWrap();
+spanWrap.init();
+
+
+const iSObservers = document.querySelectorAll('.waypoint');
+const options = {
+    threshold: 0.1
+};
+
+const inView = (target) => {
+    if (target.classList.contains('ttl')) {
+        target.classList.add('typing');
+    } else if (target.classList.contains('cont-img')) {
+        target.classList.add('fadeIn');
+    }
+};
 
 const observeUse = (entries) => {
     entries.forEach(entry => {
