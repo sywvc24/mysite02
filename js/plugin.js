@@ -4,18 +4,17 @@ const scroll = new SmoothScroll('a[href*="#"]', {
     easing: 'easeInOutQuint'
 });
 
-window.addEventListener('load', () => {
-    const mySwiper = new Swiper('.mv-slide', {
-        loop: true,
-        effect: 'fade',
-        preloadImages: false,
-        lazy: true,
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
-        },
-        speed: 2000
-    })
+
+const mySwiper = new Swiper('.mv-slide', {
+    loop: true,
+    effect: 'fade',
+    preloadImages: false,
+    lazy: true,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+    speed: 2000
 });
 
 const tab = new Swiper('.tab-contents', {
