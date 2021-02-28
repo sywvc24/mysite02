@@ -79,18 +79,19 @@ window.addEventListener('load', () => {
     })
 });
 
-
-const tab = new Swiper('.tab-contents', {
-    slidesPerView: 1,
-    slideActiveClass: 'swiper-slide-active',
-    autoHeight: true,
-    speed: 500,
-    thumbs: {
-        swiper: {
-            el: '.tab-menu',
-            slidesPerView: 3,
-        }
-    },
+window.addEventListener('load', () => {
+    const tab = new Swiper('.tab-contents', {
+        slidesPerView: 1,
+        slideActiveClass: 'swiper-slide-active',
+        autoHeight: true,
+        speed: 500,
+        thumbs: {
+            swiper: {
+                el: '.tab-menu',
+                slidesPerView: 3,
+            }
+        },
+    })
 });
 
 
@@ -158,7 +159,7 @@ spanWrap.init();
 
 const iSObservers = document.querySelectorAll('.waypoint');
 const options = {
-    threshold: 0.
+    threshold: 0.3
 };
 
 const inView = (target) => {
