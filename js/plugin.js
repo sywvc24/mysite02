@@ -4,7 +4,6 @@ const scroll = new SmoothScroll('a[href*="#"]', {
     easing: 'easeInOutQuint'
 });
 
-
 window.addEventListener('load', () => {
     const mySwiper = new Swiper('.mv-slide', {
         loop: true,
@@ -19,17 +18,15 @@ window.addEventListener('load', () => {
     })
 });
 
-window.addEventListener('load', () => {
-    const tab = new Swiper('.tab-contents', {
-        slidesPerView: 1,
-        slideActiveClass: 'swiper-slide-active',
-        autoHeight: true,
-        speed: 500,
-        thumbs: {
-            swiper: {
-                el: '.tab-menu',
-                slidesPerView: 3,
-            }
-        },
-    })
+const tab = new Swiper('.tab-contents', {
+    slidesPerView: 1,
+    slideActiveClass: 'swiper-slide-active',
+    autoHeight: true,
+    speed: 500,
+    thumbs: {
+        swiper: {
+            el: '.tab-menu',
+            slidesPerView: 3,
+        }
+    },
 });
