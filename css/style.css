@@ -1271,12 +1271,16 @@ footer {
 }
 
 footer .l-box {
-    padding: 10% 0 5%;
+    padding: 10% 0%;
 }
 
 footer .s-box {
     margin-top: 0;
-    padding-bottom: 3%;
+    padding-bottom: 5%;
+}
+
+.s-box.copyright {
+    padding-bottom: 0;
 }
 
 #f-sns ul {
