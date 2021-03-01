@@ -323,6 +323,9 @@ body {
 
 #wrapper {
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a {
@@ -730,6 +733,10 @@ header .right-block {
 
 .swiper-container {
     width: 100%;
+}
+
+.slideshow .swiper-slide {
+    filter: brightness(110%);
 }
 
 .catch-copy {
@@ -1260,6 +1267,7 @@ section p {
 footer {
     width: 100vw;
     background: #332e29;
+    margin-top: auto;
 }
 
 footer .l-box {
