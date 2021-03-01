@@ -328,6 +328,10 @@ body {
     min-height: 100vh;
 }
 
+main {
+    flex-grow: 1;
+}
+
 a {
     display: block;
     color: #332e29;
@@ -1267,7 +1271,6 @@ section p {
 footer {
     width: 100vw;
     background: #332e29;
-    margin-top: auto;
 }
 
 footer .l-box {
