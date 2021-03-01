@@ -987,7 +987,7 @@ section p {
 .cont-img {
     opacity: 0;
     transform: translate(0, 50px);
-    transition: all .6s ease-out;
+    transition: all .4s ease-out;
 }
 
 .fadeIn {
