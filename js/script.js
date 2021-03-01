@@ -21,7 +21,7 @@ menuList.addEventListener('click', (e) => {
 const loader = document.getElementById('js-loader');
 window.addEventListener('load', () => {
     const ms = 300;
-    const stopT = 1000;
+    const stopT = 500;
     loader.style.transitionDuration = ms + 'ms';
 
     const loaderOpacity = function () {
