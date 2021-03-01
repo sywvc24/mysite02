@@ -319,23 +319,22 @@ body {
     position: relative;
     font-family: "Helvetica Neue", Arial, YuGothic, "Yu Gothic Medium", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo, sans-serif;
     font-weight: 400;
-    min-height: 100vh;
+}
+
+html,
+body {
+    height: 100%;
 }
 
 #wrapper {
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    position: relative;
     min-height: 100%;
 }
 
 main {
-    flex-grow: 1;
-}
-
-header,
-footer {
-    flex-shrink: 0;
+    padding-bottom: 160px;
 }
 
 a {
@@ -1277,10 +1276,17 @@ section p {
 footer {
     width: 100vw;
     background: #332e29;
+    height: 160px;
+    position: absolute;
+    bottom: 0;
+}
+
+footer .inner {
+    height: 100%;
 }
 
 footer .l-box {
-    padding: 10% 0%;
+    padding: 40px 0;
 }
 
 footer .s-box {
@@ -1312,10 +1318,6 @@ footer .s-box {
         justify-content: center;
         align-items: center;
         padding-bottom: 2%;
-    }
-
-    footer .l-box {
-        padding: 5% 0 2.5%;
     }
 }
 
