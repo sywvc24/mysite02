@@ -1279,10 +1279,6 @@ footer .s-box {
     padding-bottom: 3%;
 }
 
-.s-box.copyright {
-    padding-bottom: 0;
-}
-
 #f-sns ul {
     display: flex;
     justify-content: flex-start;
