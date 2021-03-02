@@ -745,7 +745,7 @@ header .right-block {
     width: 100%;
 }
 
-.slideshow .swiper-slide img {
+.slideshow .swiper-slide {
     filter: brightness(120%);
 }
 
