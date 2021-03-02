@@ -137,7 +137,7 @@ const mySwiper = new Swiper('.mv-slide', {
     speed: 2000,
     effect: 'fade',
     autoplay: {
-        delay: 2500,
+        delay: 2000,
         disableOnInteraction: false,
     },
 });
