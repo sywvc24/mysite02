@@ -132,17 +132,20 @@ const scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 
-const mySwiper = new Swiper('.mv-slide', {
-    loop: true,
-    effect: 'fade',
-    preloadImages: false,
-    lazy: true,
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-    },
-    speed: 2000
+window.addEventListener('load', () => {
+    const mySwiper = new Swiper('.mv-slide', {
+        loop: true,
+        effect: 'fade',
+        preloadImages: false,
+        lazy: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        speed: 2000
+    })
 });
+
 
 const tab = new Swiper('.tab-contents', {
     slidesPerView: 1,
@@ -158,12 +161,13 @@ const tab = new Swiper('.tab-contents', {
 });
 
 
+
 const touch = 'ontouchstart' in document.documentElement ||
     navigator.maxTouchPoints > 0 ||
     navigator.msMaxTouchPoints > 0;
 
-if (touch) { // remove all :hover stylesheets
-    try { // prevent exception on browsers not supporting DOM styleSheets properly
+if (touch) {
+    try {
         for (let si in document.styleSheets) {
             const styleSheet = document.styleSheets[si];
             if (!styleSheet.rules) continue;
