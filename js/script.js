@@ -132,32 +132,29 @@ const scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 
-window.addEventListener('load', () => {
-    const mySwiper = new Swiper('.mv-slide', {
-        loop: true,
-        effect: 'fade',
-        preloadImages: false,
-        lazy: true,
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
-        },
-        speed: 2000
-    })
+const mySwiper = new Swiper('.mv-slide', {
+    loop: true,
+    speed: 2000,
+    effect: 'fade',
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
 });
 
 
-const tab = new Swiper('.tab-contents', {
-    slidesPerView: 1,
-    slideActiveClass: 'swiper-slide-active',
+const galleryThumbs = new Swiper('.tab-menu', {
+    slidesPerView: 3,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    slideActiveClass: 'swiper-slide-active'
+});
+const galleryTop = new Swiper('.tab-contents', {
     autoHeight: true,
-    speed: 500,
+    slidesPerView: 1,
     thumbs: {
-        swiper: {
-            el: '.tab-menu',
-            slidesPerView: 3,
-        }
-    },
+        swiper: galleryThumbs
+    }
 });
 
 
