@@ -100,7 +100,7 @@ spanWrap.init();
 
 const iSObservers = document.querySelectorAll('.waypoint');
 const options = {
-    threshold: 0.3
+    threshold: 0.1
 };
 
 const inView = (target) => {
@@ -156,7 +156,6 @@ const galleryTop = new Swiper('.tab-contents', {
         swiper: galleryThumbs
     }
 });
-
 
 
 const touch = 'ontouchstart' in document.documentElement ||
