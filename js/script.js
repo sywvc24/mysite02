@@ -100,7 +100,7 @@ spanWrap.init();
 
 const iSObservers = document.querySelectorAll('.waypoint');
 const options = {
-    threshold: 0.2
+    threshold: 0.5
 };
 
 const inView = (target) => {
