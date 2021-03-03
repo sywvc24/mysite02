@@ -1,41 +1,3 @@
-const body = document.body;
-const hamburger = document.getElementById('js-hamburger');
-const blackBg = document.getElementById('js-black-bg');
-const menuList = document.getElementById('indexList');
-
-hamburger.addEventListener('click', (e) => {
-    body.classList.toggle('nav-open');
-});
-
-blackBg.addEventListener('click', (e) => {
-    body.classList.remove('nav-open');
-});
-
-menuList.addEventListener('click', (e) => {
-    if (body.classList.contains('nav-open')) {
-        body.classList.remove('nav-open');
-    }
-});
-
-
-const loader = document.getElementById('js-loader');
-window.addEventListener('load', () => {
-    const ms = 300;
-    const stopT = 500;
-    loader.style.transitionDuration = ms + 'ms';
-
-    const loaderOpacity = function () {
-        loader.style.opacity = 0;
-    }
-    const loaderDisplay = function () {
-        loader.style.display = 'none';
-    }
-
-    setTimeout(loaderOpacity, stopT);
-    setTimeout(loaderDisplay, stopT + ms);
-});
-
-
 class SpanWrap {
     constructor() {
         this.settings = {
@@ -96,6 +58,44 @@ class SpanWrap {
 
 const spanWrap = new SpanWrap();
 spanWrap.init();
+
+
+const body = document.body;
+const hamburger = document.getElementById('js-hamburger');
+const blackBg = document.getElementById('js-black-bg');
+const menuList = document.getElementById('indexList');
+
+hamburger.addEventListener('click', (e) => {
+    body.classList.toggle('nav-open');
+});
+
+blackBg.addEventListener('click', (e) => {
+    body.classList.remove('nav-open');
+});
+
+menuList.addEventListener('click', (e) => {
+    if (body.classList.contains('nav-open')) {
+        body.classList.remove('nav-open');
+    }
+});
+
+
+const loader = document.getElementById('js-loader');
+window.addEventListener('load', () => {
+    const ms = 300;
+    const stopT = 500;
+    loader.style.transitionDuration = ms + 'ms';
+
+    const loaderOpacity = function () {
+        loader.style.opacity = 0;
+    }
+    const loaderDisplay = function () {
+        loader.style.display = 'none';
+    }
+
+    setTimeout(loaderOpacity, stopT);
+    setTimeout(loaderDisplay, stopT + ms);
+});
 
 
 const iSObservers = document.querySelectorAll('.waypoint');
