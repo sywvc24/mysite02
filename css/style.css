@@ -1014,7 +1014,7 @@ section p {
     width: 56%;
     max-width: 220px;
     margin: 0 auto;
-    padding: 20% 0 10%;
+    padding: 30% 0 10%;
 }
 
 .logo-area img {
@@ -1051,6 +1051,10 @@ section p {
         width: 30%;
         max-width: 400px;
         margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #concept .txt-box {
