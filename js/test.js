@@ -4,9 +4,10 @@ const options = {
 };
 
 const inView = (target) => {
-    if (target.classList.contains('typing')) {
+    if (target.classList.contains('ttl')) {
         const spanWrap = new SpanWrap(target);
         spanWrap.init();
+        target.classList.add('typing');
     } else if (target.classList.contains('cont-img')) {
         target.classList.add('fadeIn');
     }
