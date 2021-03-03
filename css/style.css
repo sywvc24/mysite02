@@ -1013,8 +1013,7 @@ section p {
 .logo-area {
     width: 56%;
     max-width: 220px;
-    margin: 0 auto;
-    padding: 30% 0 10%;
+    margin: 30% auto 10%;
 }
 
 .logo-area img {
