@@ -888,6 +888,11 @@ section .inner {
     opacity: 0;
 }
 
+.typing span:nth-child(6),
+.typing span:nth-child(12) {
+    margin-right: .5em;
+}
+
 .typing span:nth-child(1) {
     animation: text .1s cubic-bezier(0.3, 0.72, 0.56, 0.99) 0.1s forwards;
 }
@@ -966,6 +971,14 @@ section .inner {
 
 .typing span:nth-child(20) {
     animation: text .1s cubic-bezier(0.3, 0.72, 0.56, 0.99) 2s forwards;
+}
+
+.typing span:nth-child(21) {
+    animation: text .1s cubic-bezier(0.3, 0.72, 0.56, 0.99) 2.1s forwards;
+}
+
+.typing span:nth-child(22) {
+    animation: text .1s cubic-bezier(0.3, 0.72, 0.56, 0.99) 2.2s forwards;
 }
 
 @keyframes text {
@@ -1053,7 +1066,7 @@ section p {
 .logo-area {
     width: 56%;
     max-width: 220px;
-    margin: 30% auto;
+    margin: 25% auto 20%;
 }
 
 .logo-area img {
@@ -1061,7 +1074,7 @@ section p {
 }
 
 .lead {
-    margin: 3em 0 2em;
+    margin: 14% 0 10%;
     text-align: center;
 }
 
