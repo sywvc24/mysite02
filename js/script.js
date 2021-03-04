@@ -98,7 +98,7 @@ const iSObservers = document.querySelectorAll('.waypoint');
 const options = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.2,
+    threshold: 0.2
 };
 
 const inView = (target) => {
