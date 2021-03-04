@@ -1094,6 +1094,7 @@ section p {
 
 @media screen and (min-width: 600px) {
     .lead {
+         margin: 7% 0 5%;
         text-align: center;
     }
 }
