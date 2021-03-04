@@ -86,12 +86,8 @@ window.addEventListener('load', () => {
     const stopT = 500;
     loader.style.transitionDuration = ms + 'ms';
 
-    const loaderOpacity = function () {
-        loader.style.opacity = 0;
-    }
-    const loaderDisplay = function () {
-        loader.style.display = 'none';
-    }
+    const loaderOpacity = () => loader.style.opacity = 0;
+    const loaderDisplay = () => loader.style.display = 'none';
 
     setTimeout(loaderOpacity, stopT);
     setTimeout(loaderDisplay, stopT + ms);
@@ -101,12 +97,12 @@ window.addEventListener('load', () => {
 const iSObservers = document.querySelectorAll('.waypoint');
 const options = {
     root: null,
-    rootMargin: "0% 0% -20% 0%",
+    rootMargin: "0px",
     threshold: 0.2,
 };
 
 const inView = (target) => {
-    if (target.classList.contains('ttl')) {
+    if (target.classList.contains('letter')) {
         target.classList.add('typing');
     } else if (target.classList.contains('cont-img')) {
         target.classList.add('fadeIn');
