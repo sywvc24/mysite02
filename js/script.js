@@ -102,10 +102,10 @@ const options = {
 };
 
 const inView = (target) => {
-    if (target.classList.contains('letter')) {
-        target.classList.add('typing');
-    } else if (target.classList.contains('cont-img')) {
+    if (target.classList.contains('cont-img')) {
         target.classList.add('fadeIn');
+    } else if (target.classList.contains('letter')) {
+        target.classList.add('typing');
     }
 };
 
