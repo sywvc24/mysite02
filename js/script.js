@@ -85,12 +85,15 @@ window.addEventListener('load', () => {
     const ms = 300;
     const stopT = 500;
     loader.style.transitionDuration = ms + 'ms';
+    const letter = document.querySelector('.letter');
 
     const loaderOpacity = () => loader.style.opacity = 0;
     const loaderDisplay = () => loader.style.display = 'none';
+    const typingLetter = () => letter.classList.add('typing');
 
     setTimeout(loaderOpacity, stopT);
     setTimeout(loaderDisplay, stopT + ms);
+    setTimeout(typingLetter, stopT + ms);
 });
 
 
@@ -104,8 +107,6 @@ const options = {
 const inView = (target) => {
     if (target.classList.contains('cont-img')) {
         target.classList.add('fadeIn');
-    } else if (target.classList.contains('letter')) {
-        target.classList.add('typing');
     }
 };
 
