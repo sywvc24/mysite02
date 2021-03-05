@@ -414,17 +414,21 @@ li {
     right: 0;
     top: 0;
     z-index: 999;
-    background-color: #fafdff;
 }
 
 .loading-inner {
+    width: 100%;
+    height: 100%;
+    background-color: #fafdff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
     animation: rotate 2s linear infinite normal;
     height: 1rem;
     width: 1rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .loader__ball {
