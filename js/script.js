@@ -1,63 +1,21 @@
-class SpanWrap {
-    constructor() {
-        this.settings = {
-            target: ".js-span-wrap-text"
-        }
-        this.targets = "";
-        this.targetLength = 0;
-        this.nodes = [];
-        this.convertContents = [];
-    }
+gsap.registerPlugin(TextPlugin);
 
-    init(options) {
-        this.setup(options);
-        this.getNodes();
-        this.convert();
-        this.set();
-    }
-
-    setup(options) {
-        this.settings = Object.assign({
-            target: this.settings.target
-        }, options || {});
-        this.targets = document.querySelectorAll(this.settings.target);
-        this.targetLength = this.targets.length;
-    }
-
-    getNodes() {
-        for (let target of this.targets) {
-            let nodes = target.childNodes;
-            this.nodes.push(nodes);
-        }
-    }
-
-    convert() {
-        for (let i = 0; i < this.targetLength; i++) {
-            this.convertContents.push([]);
-            for (let node of this.nodes[i]) {
-                if (node.nodeType == 3) {
-                    let text = node.textContent.replace(/\s+/g, '');
-                    text.split('').forEach((v) => {
-                        this.convertContents[i].push("<span>" + v + "</span>");
-                    });
-
-                } else {
-                    this.convertContents[i].push(node.outerHTML);
-                }
-            }
-        }
-    }
-
-    set() {
-        for (let i = 0; i < this.targetLength; i++) {
-            this.targets[i].innerHTML = this.convertContents[i].join("");
-        }
-    }
-
-}
-
-const spanWrap = new SpanWrap();
-spanWrap.init();
+const tl = gsap.timeline();
+window.addEventListener('load', () => {
+    tl.to('.loading-inner', {
+            opacity: 0,
+            duration: 0.3,
+            delay: 0.6,
+            ease: 'power3.out'
+        })
+        .to('.loader', {
+            display: 'none',
+        })
+        .to(".letter span", {
+            duration: 2,
+            text: "Always choose happiness!"
+        })
+});
 
 
 const body = document.body;
@@ -77,23 +35,6 @@ menuList.addEventListener('click', (e) => {
     if (body.classList.contains('nav-open')) {
         body.classList.remove('nav-open');
     }
-});
-
-
-const loader = document.getElementById('js-loader');
-window.addEventListener('load', () => {
-    const ms = 300;
-    const stopT = 500;
-    loader.style.transitionDuration = ms + 'ms';
-    const letter = document.querySelector('.letter');
-
-    const loaderOpacity = () => loader.style.opacity = 0;
-    const loaderDisplay = () => loader.style.display = 'none';
-    const typingLetter = () => letter.classList.add('typing');
-
-    setTimeout(loaderOpacity, stopT);
-    setTimeout(loaderDisplay, stopT + ms);
-    setTimeout(typingLetter, stopT + ms);
 });
 
 
