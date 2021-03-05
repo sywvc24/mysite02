@@ -51,15 +51,16 @@ const scroll = new SmoothScroll('a[href*="#"]', {
     easing: 'easeInOutQuint'
 });
 
-
-const mySwiper = new Swiper('.mv-slide', {
-    loop: true,
-    speed: 2000,
-    effect: 'fade',
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-    },
+window.addEventListener('load', () => {
+    const mySwiper = new Swiper('.mv-slide', {
+        loop: true,
+        speed: 2000,
+        effect: 'fade',
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+    });
 });
 
 
