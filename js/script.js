@@ -1,23 +1,3 @@
-gsap.registerPlugin(TextPlugin);
-
-const tl = gsap.timeline();
-window.addEventListener('load', () => {
-    tl.to('.loading-inner', {
-            opacity: 0,
-            duration: 0.3,
-            delay: 0.6,
-            ease: 'power3.out'
-        })
-        .to('.loader', {
-            display: 'none',
-        })
-        .to(".letter span", {
-            duration: 2,
-            text: "Always choose happiness!"
-        })
-});
-
-
 const body = document.body;
 const hamburger = document.getElementById('js-hamburger');
 const blackBg = document.getElementById('js-black-bg');
@@ -95,6 +75,25 @@ const galleryTop = new Swiper('.tab-contents', {
     thumbs: {
         swiper: galleryThumbs
     }
+});
+
+
+gsap.registerPlugin(TextPlugin);
+const tl = gsap.timeline();
+window.addEventListener('load', () => {
+    tl.to('.loading-inner', {
+            opacity: 0,
+            duration: 0.3,
+            delay: 0.6,
+            ease: 'power3.out'
+        })
+        .to('.loader', {
+            display: 'none',
+        })
+        .to(".letter span", {
+            duration: 2,
+            text: "Always choose happiness"
+        })
 });
 
 
