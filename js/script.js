@@ -18,7 +18,7 @@ const iSObservers = document.querySelectorAll('.waypoint');
 const options = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.3
+    threshold: 0.
 };
 const inView = (target) => {
     if (target.classList.contains('cont-img')) {
