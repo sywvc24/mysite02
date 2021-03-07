@@ -962,15 +962,19 @@ section p {
     width: 56%;
     max-width: 220px;
     margin: 0 auto;
-    padding: 40% 0 20%;
+    padding-top: 40%;
 }
 
 .logo-area img {
     filter: invert(50%) sepia(0%) saturate(11%) hue-rotate(143deg) brightness(50%) contrast(100%);
 }
 
+#concept .txt-box {
+    padding-top: 40%;
+}
+
 .s-title {
-    margin: 50% 0 12%;
+    margin: 17% 0 12%;
 }
 
 .lead {
@@ -1040,7 +1044,7 @@ section p {
 
     #concept .txt-box {
         width: 70%;
-        padding-left: 10%;
+        padding: 0 0 0 10%;
     }
 }
 
