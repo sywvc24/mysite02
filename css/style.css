@@ -961,7 +961,8 @@ section p {
 .logo-area {
     width: 56%;
     max-width: 220px;
-    margin: 25% auto 20%;
+    margin: 0 auto;
+    padding: 25% 0 20%;
 }
 
 .logo-area img {
@@ -971,6 +972,35 @@ section p {
 .lead {
     margin: 14% 0 10%;
     text-align: center;
+}
+
+.matrix .bg-wrap,
+.matrix .bg-wrap .inn {
+    display: block;
+}
+
+.matrix .bg-wrap {
+    overflow: hidden;
+    opacity: 0;
+}
+
+.matrix .bg-wrap + .bg-wrap {
+    margin-top: 10px;
+}
+
+.matrix .bg-wrap .inn {
+    opacity: 0;
+    transform: matrix(1, 0, 0, 1, 0, 100);
+    transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.matrix.is-animated .bg-wrap {
+    opacity: 1;
+}
+
+.matrix.is-animated .bg-wrap .inn {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
 .concept-image li:first-of-type {
@@ -1002,6 +1032,8 @@ section p {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 0;
+        padding: 0;
     }
 
     #concept .txt-box {
