@@ -969,8 +969,11 @@ section p {
     filter: invert(50%) sepia(0%) saturate(11%) hue-rotate(143deg) brightness(50%) contrast(100%);
 }
 
-.lead {
+.s-title {
     margin: 14% 0 10%;
+}
+
+.lead {
     text-align: center;
 }
 
@@ -1018,9 +1021,8 @@ section p {
 }
 
 @media screen and (min-width: 600px) {
-    .lead {
+    .s-title {
         margin: 7% 0 5%;
-        text-align: center;
     }
 }
 
