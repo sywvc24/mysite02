@@ -22,12 +22,14 @@ const iSObservers = document.querySelectorAll('.waypoint');
 const options = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.2
+    threshold: 0.3
 };
 
 const inView = (target) => {
     if (target.classList.contains('cont-img')) {
         target.classList.add('fadeIn');
+    } else if (target.classList.contains('matrix')) {
+        target.classList.add('is-animated');
     }
 };
 
