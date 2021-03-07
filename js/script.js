@@ -2,29 +2,24 @@ const body = document.body;
 const hamburger = document.getElementById('js-hamburger');
 const blackBg = document.getElementById('js-black-bg');
 const menuList = document.getElementById('indexList');
-
 hamburger.addEventListener('click', (e) => {
     body.classList.toggle('nav-open');
 });
-
 blackBg.addEventListener('click', (e) => {
     body.classList.remove('nav-open');
 });
-
 menuList.addEventListener('click', (e) => {
     if (body.classList.contains('nav-open')) {
         body.classList.remove('nav-open');
     }
 });
 
-
 const iSObservers = document.querySelectorAll('.waypoint');
 const options = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.4
+    threshold: 0.3
 };
-
 const inView = (target) => {
     if (target.classList.contains('cont-img')) {
         target.classList.add('fadeIn');
@@ -32,7 +27,6 @@ const inView = (target) => {
         target.classList.add('is-animated');
     }
 };
-
 const observeUse = (entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -40,12 +34,10 @@ const observeUse = (entries) => {
         }
     });
 };
-
 const observer = new IntersectionObserver(observeUse, options);
 iSObservers.forEach(iSObserver => {
     observer.observe(iSObserver);
 });
-
 
 const scroll = new SmoothScroll('a[href*="#"]', {
     speedAsDuration: true,
@@ -65,7 +57,6 @@ window.addEventListener('load', () => {
     });
 });
 
-
 const galleryThumbs = new Swiper('.tab-menu', {
     slidesPerView: 3,
     watchSlidesVisibility: true,
@@ -79,7 +70,6 @@ const galleryTop = new Swiper('.tab-contents', {
         swiper: galleryThumbs
     }
 });
-
 
 gsap.registerPlugin(TextPlugin);
 const tl = gsap.timeline();
@@ -99,20 +89,16 @@ window.addEventListener('load', () => {
         })
 });
 
-
 const touch = 'ontouchstart' in document.documentElement ||
     navigator.maxTouchPoints > 0 ||
     navigator.msMaxTouchPoints > 0;
-
 if (touch) {
     try {
         for (let si in document.styleSheets) {
             const styleSheet = document.styleSheets[si];
             if (!styleSheet.rules) continue;
-
             for (let ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
                 if (!styleSheet.rules[ri].selectorText) continue;
-
                 if (styleSheet.rules[ri].selectorText.match(':hover')) {
                     styleSheet.deleteRule(ri);
                 }
