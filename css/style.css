@@ -864,7 +864,6 @@ section .inner {
 }
 
 .s-box {
-    margin-top: 10%;
     width: 100%;
     margin-top: 15%;
 }
@@ -962,15 +961,11 @@ section p {
     width: 56%;
     max-width: 220px;
     margin: 0 auto;
-    padding-top: 50%;
+    padding: 50% 0;
 }
 
 .logo-area img {
     filter: invert(50%) sepia(0%) saturate(11%) hue-rotate(143deg) brightness(50%) contrast(100%);
-}
-
-#concept .txt-box {
-    padding-top: 50%;
 }
 
 .s-title {
@@ -998,7 +993,7 @@ section p {
 .matrix .bg-wrap .inn {
     opacity: 0;
     transform: matrix(1, 0, 0, 1, 0, 100);
-    transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1) .2s;
 }
 
 .matrix.is-animated .bg-wrap {
@@ -1169,7 +1164,6 @@ section p {
 
 .name dt {
     float: left;
-    font-size: 1rem;
 }
 
 .name dd {
