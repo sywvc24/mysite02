@@ -16,16 +16,11 @@
 		/>
 		<link
 			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css"
+			href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.15/swiper-bundle.min.css"
 			media="print"
 			onload="this.media='all'"
 		/>
-		<link
-			href="css/style.min.css"
-			rel="stylesheet"
-			media="print"
-			onload="this.media='all'"
-		/>
+		<link href="css/style.min.css" rel="stylesheet" />
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
 			defer
@@ -39,7 +34,7 @@
 			defer
 		></script>
 		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"
+			src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.15/swiper-bundle.min.js"
 			defer
 		></script>
 		<script src="js/script.min.js" defer></script>
@@ -47,45 +42,6 @@
 			src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.1/lazysizes.min.js"
 			defer
 		></script>
-		<style>
-			.loader {
-				width: 100vw;
-				height: 100vh;
-				position: fixed;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				top: 0;
-				z-index: 999;
-			}
-			.loading-inner {
-				width: 100%;
-				height: 100%;
-				background: #ca7903;
-			}
-			#bubbles {
-				width: 100%;
-				height: 100%;
-				opacity: 0;
-			}
-			.logo-wrap {
-				max-width: 450px;
-				width: 80%;
-				height: auto;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-			}
-			.loading-text {
-				width: 100%;
-				height: auto;
-			}
-			.loading-text path {
-				fill: #332e29;
-				opacity: 0;
-			}
-		</style>
 	</head>
 	<body id="top">
 		<div class="loader">
@@ -230,7 +186,13 @@
 					<div class="inner">
 						<div class="l-box">
 							<div class="logo-area">
-								<img src="img/logo-mark.png" alt="Brise Douce" />
+								<img
+									src="img/logo-mark.png"
+									alt="Brise Douce"
+									decoding="async"
+									width="444"
+									height="187"
+								/>
 							</div>
 							<div class="s-box txt-box">
 								<h2 class="ttl en">CONCEPT</h2>
@@ -359,17 +321,15 @@
 									</li>
 								</ul>
 							</div>
-							<div class="s-box menu-list">
-								<div class="swiper-container tab-menu">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide en">Lunch</div>
-										<div class="swiper-slide en">Dinner</div>
-										<div class="swiper-slide en">Takeout</div>
-									</div>
-								</div>
-								<div class="swiper-container tab-contents">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
+							<div class="s-box">
+								<div class="accordion-single js-acc-single menu-list">
+									<div class="accordion-single-item js-acc-item">
+										<h3
+											class="accordion-single-title js-acc-single-trigger en noborder"
+										>
+											Lunch
+										</h3>
+										<div class="accordion-single-content">
 											<div class="ss-inner">
 												<h4 class="menu-name">
 													平日限定ランチ<span class="yen">&yen;1,000~</span>
@@ -414,7 +374,12 @@
 												</ul>
 											</div>
 										</div>
-										<div class="swiper-slide">
+									</div>
+									<div class="accordion-single-item js-acc-item">
+										<h3 class="accordion-single-title js-acc-single-trigger en">
+											Dinner
+										</h3>
+										<div class="accordion-single-content">
 											<div class="ss-inner">
 												<h4 class="menu-name">
 													前菜<span class="yen">&yen;480~</span>
@@ -447,7 +412,7 @@
 													<li>ほうじ茶ガレット</li>
 													<li>きな粉と黒蜜と抹茶アイスのガレット</li>
 												</ul>
-												<h4>
+												<h4 class="menu-name">
 													おまかせコース料理<span class="yen">&yen;3,500</span>
 												</h4>
 												<p class="small">
@@ -456,7 +421,12 @@
 												</p>
 											</div>
 										</div>
-										<div class="swiper-slide">
+									</div>
+									<div class="accordion-single-item js-acc-item">
+										<h3 class="accordion-single-title js-acc-single-trigger en">
+											Takeout
+										</h3>
+										<div class="accordion-single-content">
 											<div class="ss-inner">
 												<p class="small">
 													お電話にて承っております。<br />
@@ -512,7 +482,7 @@
 								</div>
 							</div>
 							<div class="s-box">
-								<p class="txt-c small">
+								<p class="txt-c">
 									オンラインショップでもクラフトシードルを販売しています。お家でも是非お楽しみください。
 								</p>
 								<a href="" class="btn pc-hover small"
@@ -545,7 +515,7 @@
 									<dd>Natsuki Ishihara</dd>
 								</dl>
 								<div class="chef-intro">
-									<p class="small">
+									<p>
 										横浜出身。専門学校卒業後、都内フランス料理店で修業後、渡仏。フランスの1つ星レストラン等で5年ほど研鑽を積み、現地で触れたフランス料理という文化に改めて感激する。特に蕎麦文化に感激し、帰国後,都内蕎麦店で修業し、蕎麦料理を学ぶ。1年後、地元横浜にBrise
 										Douceを開く。
 									</p>
