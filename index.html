@@ -9,10 +9,17 @@
 		<meta name="format-detection" content="telephone=no" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="robots" content="noindex, nofollow" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="preload"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+JP:wght@500&display=swap"
+			as="style"
+		/>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+JP:wght@500&display=swap"
 			rel="stylesheet"
+			media="print"
+			onload="this.media='all'"
 		/>
 		<link
 			rel="stylesheet"
@@ -323,7 +330,12 @@
 								<div class="accordion-single js-acc-single menu-list">
 									<div class="accordion-single-item js-acc-item">
 										<h3
-											class="accordion-single-title js-acc-single-trigger en noborder"
+											class="
+												accordion-single-title
+												js-acc-single-trigger
+												en
+												noborder
+											"
 										>
 											Lunch
 										</h3>
