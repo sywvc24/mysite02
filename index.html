@@ -12,7 +12,11 @@
 	<meta name="robots" content="noindex, nofollow" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Sans+JP&display=swap" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Sans+JP&display=swap" media="print" onload="this.media='all'" />
+	<noscript>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Sans+JP&display=swap" />
+	</noscript>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.3/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'" />
 	<link href="css/style.min.css" rel="stylesheet" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
@@ -115,10 +119,8 @@
 							<img src="img/logo-mark.png" alt="Brise Douce" decoding="async" width="444" height="187" />
 						</div>
 						<div class="s-box txt-box">
-							<h2 class="ttl en">CONCEPT</h2>
-							<h3 class="jp lead">
-								国産そば粉のガレットと<br class="sp-only" />クラフトシードル
-							</h3>
+							<h2 class="ttl en fade-anim invisible waypoint">CONCEPT</h2>
+							<h3 class="jp lead">国産そば粉のガレットと<br class="sp-only" />クラフトシードル</h3>
 							<p>
 								Brise Douce(ブリーズドゥース)は、フランスのブルターニュ地方発祥のそば料理ガレットを国産原料の蕎麦粉を用いて提供致します。<br />
 								またそれに合わせて日本各地のりんごの発泡酒シードルを取り揃えています。
@@ -130,21 +132,21 @@
 					</div>
 					<div class="concept-image s-box">
 						<ul>
-							<li class="cont-img waypoint">
+							<li class="fade-anim invisible waypoint">
 								<picture>
 									<source media="(max-width: 600px)" data-srcset="img/concept01_sp.jpg" />
 									<source media="(min-width: 601px)" data-srcset="img/concept01_pc.jpg" />
 									<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/concept01_pc.jpg" alt="店内の様子" class="lazyload" width="941" height="665" />
 								</picture>
 							</li>
-							<li class="cont-img waypoint">
+							<li class="fade-anim invisible waypoint">
 								<picture>
 									<source media="(max-width: 600px)" data-srcset="img/concept02_sp.jpg" />
 									<source media="(min-width: 601px)" data-srcset="img/concept02_pc.jpg" />
 									<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/concept02_pc.jpg" alt="クラフトシードル" class="lazyload" width="538" height="538" />
 								</picture>
 							</li>
-							<li class="cont-img waypoint">
+							<li class="fade-anim invisible waypoint">
 								<picture>
 									<source media="(max-width: 600px)" data-srcset="img/concept03_sp.jpg" />
 									<source media="(min-width: 601px)" data-srcset="img/concept03_pc.jpg" />
@@ -157,18 +159,18 @@
 			</section>
 			<section id="menu" class="mca-sec">
 				<div class="inner">
-					<h2 class="en ttl">MENU</h2>
+					<h2 class="en ttl fade-anim invisible waypoint">MENU</h2>
 					<div class="l-box">
 						<div class="menu-img s-box">
 							<ul>
-								<li class="cont-img waypoint">
+								<li class="fade-anim invisible waypoint">
 									<picture>
 										<source media="(max-width: 600px)" srcset="img/menu01_sp.jpg" />
 										<source media="(min-width: 601px)" srcset="img/menu01_pc.jpg" />
 										<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/menu01_pc.jpg" alt="ガレットとシードル" class="lazyload" width="672" height="475" />
 									</picture>
 								</li>
-								<li class="cont-img waypoint">
+								<li class="fade-anim invisible waypoint">
 									<picture>
 										<source media="(max-width: 600px)" srcset="img/menu02_sp.jpg" />
 										<source media="(min-width: 601px)" srcset="img/menu02_pc.jpg" />
@@ -312,9 +314,9 @@
 			</section>
 			<section id="chef" class="section simple-sec mca-sec">
 				<div class="inner">
-					<h2 class="en ttl">CHEF</h2>
+					<h2 class="en ttl fade-anim invisible waypoint">CHEF</h2>
 					<div class="l-box">
-						<div class="img-box s-box cont-img waypoint">
+						<div class="img-box s-box fade-anim invisible waypoint">
 							<picture>
 								<source type="image/webp" data-srcset="img/chef.webp" />
 								<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/chef.jpg" alt="シェフの紹介" class="lazyload" width="685" height="423" />
@@ -336,9 +338,9 @@
 			</section>
 			<section id="access" class="section simple-sec mca-sec">
 				<div class="inner">
-					<h2 class="en ttl">ACCESS</h2>
+					<h2 class="en ttl fade-anim invisible waypoint">ACCESS</h2>
 					<div class="l-box">
-						<div class="img-box s-box cont-img waypoint">
+						<div class="img-box s-box fade-anim invisible waypoint">
 							<picture>
 								<source type="image/webp" data-srcset="img/access.webp" />
 								<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/access.jpg" alt="お店外観" class="lazyload" width="685" height="423" />
